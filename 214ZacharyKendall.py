@@ -6,8 +6,9 @@ import tkinter as tk
 
 def test_my_button():
     frame_auth.tkraise()
+    password = ent_password.get()
+    lbl_auth.config(text = password)
     
-
 # main window
 root = tk.Tk()
 root.wm_geometry("200x200")
@@ -29,7 +30,7 @@ lbl_password.pack(padx=100)
 ent_password = tk.Entry(frame_login, bd=3, show='*')
 ent_password.pack(pady=5)
 
-btn_login = tk.Button(frame_login, text="Login",font="Courier",command=test_my_button)
+btn_login = tk.Button(frame_login, text="Login", font="Courier",command=test_my_button)
 btn_login.pack()
 
 frame_auth = tk.Frame(root)
